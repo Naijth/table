@@ -1,0 +1,18 @@
+table, tr, td {
+    border: 1px, solid, black;
+    border-collapse: collapse;
+    text-align: center;
+}
+tr:first-child {
+    background-color: rgb(255, 70, 70);
+    font-weight: bold;
+} 
+tr:nth-child(even) {
+    background-color: beige;
+}
+tr:not(:first-child):nth-child(odd) {
+    background-color: bisque;
+}
+table tr:not(:first-child):hover {
+    background-color: azure;
+}
