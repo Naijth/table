@@ -1,2 +1,2 @@
 # table
-### stuff I did in class. yadde yadde yadde
+### stuff I did in class. crazy shit ikr?
