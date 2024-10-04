@@ -27,6 +27,7 @@ let array = [
         pet: 'macska'
     },
 ]
+
 const table = document.createElement('table')
 document.body.appendChild(table)
 const thead = document.createElement('thead')
@@ -82,3 +83,16 @@ for(const pers of array){
     tr2.appendChild(td5)
     td5.innerHTML = pers.pet
 }
+const form = document.getElementById('form')
+form.addEventListener('submit',function(e){
+    const lastname = document.getElementById('lastname')
+    const firstname1 = document.getElementById('firstname1')
+    const firstname2 = document.getElementById('firstname2')
+    const married = document.getElementById('married')
+    const pet = document.getElementById('pet')
+    const lastnameValue = lastname.value
+    const firstname1Value = firstname1.value
+    const firstname2Value = firstname2.value
+    const marriedValue = married.value
+    const petValue = pet.value
+})
