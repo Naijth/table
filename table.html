@@ -5,35 +5,39 @@
     <link rel="stylesheet" href="table.css"></link>
 </head>
 <body>
-    <!--<table>
-        <thead>
-            <tr>
-                <th>Vezetéknév</th>
-                <th colspan="2">Keresztnév</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Kocsis</td>
-                <td>Géza</td>
-                <td>Ferenc</td>
-            </tr>
-            <tr>
-                <td>Horváth</td>
-                <td>Mária</td>
-                <td>Julia</td>
-            </tr>
-          <tr>
-                <td>Balogh</td>
-                <td colspan="2">Ferenc</td>
-            </tr>
-            <tr>
-                <td>Horváth</td>
-                <td>Gábor</td>
-                <td>Attila</td>
-            </tr>
-        </tbody>
-    </table>-->
+    <form id="form" action="/">
+        <div class="field">
+            <label for="lastname">Vezetéknév</label>
+            <input name="lastname" id="lastname">
+            <div class="error"></div>
+        </div>
+        <div class="field">
+            <label for="firstname1">Keresztnév1</label>
+            <input name="firstname1" id="firstname1">
+            <div class="error"></div>
+        </div>
+        <div class="field">
+            <label for="firstname2">Keresztnév2</label>
+            <input name="firstname2" id="firstname2">
+            <div class="error"></div>
+        </div>
+        <div class="field">
+            <label for="married">Házas</label>
+            <input name="married" id="married" type="checkbox">
+            <div class="error"></div>
+        </div>
+        <div class="field">
+            <label for="pet">Háziállat</label>
+            <select name="pet" id="pet">
+                <option value=""></option>
+                <option value="teknős">teknőc</option>
+                <option value="kutya">kutyus</option>
+                <option value="macska">cicus</option>
+            </select>
+            <div class="error"></div>
+        </div>
+        <button>Feltölt</button>
+    </form>
     <script src="table.js"></script>
 </body>
 </html>
