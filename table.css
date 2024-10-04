@@ -16,3 +16,6 @@ tbody tr:nth-child(odd) {
 tbody tr:hover {
     background-color: azure;
 }
+.selected{
+    transform: scale(1.2);
+}
