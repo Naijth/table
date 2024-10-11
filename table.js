@@ -61,17 +61,19 @@ form.addEventListener('submit',function(e){
     let firstname2Value = firstname2.value
     const marriedValue = married.checked
     const petValue = pet.value
-    if (firstname2Value == '')
-        firstname2Value = undefined;
-    const newPerson = {
-        firstname1: firstname1Value,
-        firstname2: firstname2Value,
-        lastname: lastnameValue,
-        married: marriedValue,
-        pet: petValue
+    if (validateFields(firstname1, lastname, pet) == true){
+        if (firstname2Value == '')
+            firstname2Value = undefined;
+        const newPerson = {
+            firstname1: firstname1Value,
+            firstname2: firstname2Value,
+            lastname: lastnameValue,
+            married: marriedValue,
+            pet: petValue
+        }
+        array.push(newPerson)
+        renderTable()
     }
-    array.push(newPerson)
-    renderTable()
 })
 renderTable()
 function renderTable(){
@@ -110,4 +112,26 @@ function renderTable(){
     tr2.appendChild(td5)
     td5.innerHTML = pers.pet
     }
+}
+function validateFields(firstname1, lastname, pet){
+    let result = true;
+    if (firstname1.value == ''){
+        const father = firstname1.parentElement
+        const error = father.querySelector('.error');
+        error.innerHTML = 'kötelező'
+        result = false
+    }
+    if (lastname.value == ''){
+        const father = lastname.parentElement
+        const error = father.querySelector('.error')
+        error.innerHTML = 'kötelező'
+        result = false
+    }
+    if (pet.value == ''){
+        const father = pet.parentElement
+        const error = father.querySelector('.error')
+        error.innerHTML = 'kötelező';
+        result = false
+    }
+    return result
 }
