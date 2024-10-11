@@ -59,7 +59,7 @@ form.addEventListener('submit',function(e){
     const lastnameValue = lastname.value
     const firstname1Value = firstname1.value
     let firstname2Value = firstname2.value
-    const marriedValue = married.value
+    const marriedValue = married.checked
     const petValue = pet.value
     if (firstname2Value == '')
         firstname2Value = undefined;
