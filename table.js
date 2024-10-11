@@ -27,7 +27,6 @@ let array = [
         pet: 'macska'
     },
 ]
-
 const table = document.createElement('table')
 document.body.appendChild(table)
 const thead = document.createElement('thead')
@@ -49,7 +48,35 @@ tr1.appendChild(th4)
 th4.innerHTML = 'Háziállat';
 const tbody = document.createElement('tbody')
 table.appendChild(tbody)
-for(const pers of array){
+const form = document.getElementById('form')
+form.addEventListener('submit',function(e){
+    e.preventDefault()
+    const lastname = document.getElementById('lastname')
+    const firstname1 = document.getElementById('firstname1')
+    const firstname2 = document.getElementById('firstname2')
+    const married = document.getElementById('married')
+    const pet = document.getElementById('pet')
+    const lastnameValue = lastname.value
+    const firstname1Value = firstname1.value
+    let firstname2Value = firstname2.value
+    const marriedValue = married.value
+    const petValue = pet.value
+    if (firstname2Value == '')
+        firstname2Value = undefined;
+    const newPerson = {
+        firstname1: firstname1Value,
+        firstname2: firstname2Value,
+        lastname: lastnameValue,
+        married: marriedValue,
+        pet: petValue
+    }
+    array.push(newPerson)
+    renderTable()
+})
+renderTable()
+function renderTable(){
+    tbody.innerHTML = "";
+    for(const pers of array){
     const tr2 = document.createElement('tr')
     tbody.appendChild(tr2)
     const td1 = document.createElement('td')
@@ -82,17 +109,5 @@ for(const pers of array){
     const td5 = document.createElement('td')
     tr2.appendChild(td5)
     td5.innerHTML = pers.pet
+    }
 }
-const form = document.getElementById('form')
-form.addEventListener('submit',function(e){
-    const lastname = document.getElementById('lastname')
-    const firstname1 = document.getElementById('firstname1')
-    const firstname2 = document.getElementById('firstname2')
-    const married = document.getElementById('married')
-    const pet = document.getElementById('pet')
-    const lastnameValue = lastname.value
-    const firstname1Value = firstname1.value
-    const firstname2Value = firstname2.value
-    const marriedValue = married.value
-    const petValue = pet.value
-})
