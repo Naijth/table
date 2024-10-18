@@ -33,19 +33,11 @@ const thead = document.createElement('thead')
 table.appendChild(thead)
 const tr1 = document.createElement('tr')
 thead.appendChild(tr1)
-const th1 = document.createElement('th')
-tr1.appendChild(th1)
-th1.innerHTML = 'Vezetéknév';
-const th2 = document.createElement('th')
-tr1.appendChild(th2)
-th2.innerHTML = 'Keresztnév';
-th2.colSpan = 2
-const th3 = document.createElement('td')
-tr1.appendChild(th3)
-th3.innerHTML = 'Házassági státusz';
-const th4 = document.createElement('th')
-tr1.appendChild(th4)
-th4.innerHTML = 'Háziállat';
+createTableCell('td', 'Vezetéknév', tr1)
+const asd = createTableCell('td', 'Keresztnév', tr1) 
+asd.colSpan = 2
+createTableCell('td', 'Házassági státusz', tr1)
+createTableCell('td', 'Háziállat', tr1)
 const tbody = document.createElement('tbody')
 table.appendChild(tbody)
 const form = document.getElementById('form')
@@ -81,8 +73,6 @@ function renderTable(){
     for(const pers of array){
     const tr2 = document.createElement('tr')
     tbody.appendChild(tr2)
-    const td1 = document.createElement('td')
-    tr2.appendChild(td1)
     tr2.addEventListener('click', function(e){
         selected = tbody.querySelector('.selected')
         if(selected != 'undefined'){
@@ -90,27 +80,20 @@ function renderTable(){
             selected.classList.remove('selected')
         }
     })
-    td1.innerHTML = pers.lastname
-    const td2 = document.createElement('td')
-    tr2.appendChild(td2)
-    td2.innerHTML = pers.firstname1
+    createTableCell('td', pers.lastname, tr2)
     if(pers.firstname2 == undefined){
-        td2.colSpan = 2
+        const wah = createTableCell('td', pers.firstname1, tr2)
+        wah.colSpan = 2
     }else{
-    const td3 = document.createElement('td')
-    tr2.appendChild(td3)
-    td3.innerHTML = pers.firstname2    
+        createTableCell('td', pers.firstname1, tr2)
+        createTableCell('td', pers.firstname2, tr2)
     }
-    const td4 = document.createElement('td')
-    tr2.appendChild(td4)
     if(pers.married == true){
-        td4.innerHTML = 'Házas'
+        createTableCell('td', 'Házas', tr2)
     }else{
-        td4.innerHTML = 'Nem házas'
+        createTableCell('td', 'Nem házas', tr2)
     }
-    const td5 = document.createElement('td')
-    tr2.appendChild(td5)
-    td5.innerHTML = pers.pet
+    createTableCell('td', pers.pet, tr2)
     }
 }
 function validateFields(firstname1, lastname, pet){
@@ -134,4 +117,10 @@ function validateFields(firstname1, lastname, pet){
         result = false
     }
     return result
+}
+function createTableCell(tagName, innerHTML, parentElement){
+    const tag = document.createElement(tagName)
+    tag.innerHTML = innerHTML
+    parentElement.appendChild(tag)
+    return tag
 }
