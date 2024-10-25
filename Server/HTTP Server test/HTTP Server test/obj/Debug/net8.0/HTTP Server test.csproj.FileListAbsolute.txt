@@ -15,3 +15,21 @@ C:\Users\gabri\OneDrive\Desktop\Github\C# Http server\HTTP Server test\HTTP Serv
 C:\Users\gabri\OneDrive\Desktop\Github\C# Http server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.pdb
 C:\Users\gabri\OneDrive\Desktop\Github\C# Http server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Desktop\Github\C# Http server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\ref\HTTP Server test.dll
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\bin\Debug\net8.0\HTTP Server test.exe
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\bin\Debug\net8.0\HTTP Server test.deps.json
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\bin\Debug\net8.0\HTTP Server test.runtimeconfig.json
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\bin\Debug\net8.0\HTTP Server test.dll
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\bin\Debug\net8.0\HTTP Server test.pdb
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.csproj.AssemblyReference.cache
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.sourcelink.json
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Ser.49757041.Up2Date
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.dll
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\refint\HTTP Server test.dll
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.pdb
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\HTTP Server test.genruntimeconfig.cache
+C:\Users\gabri\OneDrive\Desktop\Github\Night beautiful website\table\Server\HTTP Server test\HTTP Server test\obj\Debug\net8.0\ref\HTTP Server test.dll

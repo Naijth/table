@@ -1,4 +1,3 @@
-personCount = 0;
 const rowTag = "td"
 class PersonData
 {
@@ -33,6 +32,7 @@ form.addEventListener('submit',function(e){
     person = (getDataFromForm())
     if (validateFields(person) == true){
         persons.push(person)
+        SaveData(person)
         renderTable()
     }
 })
@@ -49,7 +49,7 @@ function renderTable(data = null)
             const tr2 = document.createElement('tr')
             tbody.appendChild(tr2)
 
-            createRows(pers, tr2, true)
+            createRows(pers, tr2)
 
             tr2.addEventListener('click', function(e)
             {
@@ -89,14 +89,13 @@ function validateFields(person){
 }
 
 //Handles the creation of rows
-function createRows(persData, tr2, shouldSave = false)
+function createRows(persData, tr2)
 {
     createTableCell(rowTag, persData.firstname1, tr2)
     createTableCell(rowTag, persData.firstname2, tr2)
     createTableCell(rowTag, persData.lastname, tr2)
     createTableCell(rowTag, persData.married, tr2)
     createTableCell(rowTag, persData.pet, tr2)
-    if(shouldSave == true){SaveData(persData)}
 }
 
 //Acquires data from the form
@@ -126,6 +125,7 @@ function createTableCell(tagName, innerHTML, parentElement){
 
 // Saves data to the server
 function SaveData(data){
+    console.log(data.id)
     fetch('http://localhost:8080/', { 
         method: "POST",
         headers: {

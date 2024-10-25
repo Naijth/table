@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\Github\\Night beautiful website\\Server\\HTTP Server test\\HTTP Server test\\HTTP Server test.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Desktop\\Github\\Night beautiful website\\table\\Server\\HTTP Server test\\HTTP Server test\\HTTP Server test.csproj",
       "projectName": "HTTP Server test",
-      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Github\\Night beautiful website\\Server\\HTTP Server test\\HTTP Server test\\HTTP Server test.csproj",
+      "projectPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Github\\Night beautiful website\\table\\Server\\HTTP Server test\\HTTP Server test\\HTTP Server test.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Github\\Night beautiful website\\Server\\HTTP Server test\\HTTP Server test\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\Github\\Night beautiful website\\table\\Server\\HTTP Server test\\HTTP Server test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",

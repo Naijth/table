@@ -46,10 +46,12 @@ namespace HTTP_Server
                         string requestBody = reader.ReadToEnd();
                         PersonData person = JsonConvert.DeserializeObject<PersonData>(requestBody);
                         Console.WriteLine(person.firstname1);
+                        Console.WriteLine(person.id);
                         if(person.id == 0)
                         {
                             person.id = Program.people.Count + 1;
                         }
+                        Console.WriteLine(person.id);
                         PersonData temp = Program.people.Where(P => P.id == person.id).FirstOrDefault();
                         if (temp != null)
                         {
@@ -57,8 +59,10 @@ namespace HTTP_Server
                         }
                         else
                         {
+                            Console.WriteLine($"Added");
                             Program.people.Add(person);
                         }
+                        Console.WriteLine(person.id);
                         List<byte[]> b = new List<byte[]>();
                         foreach (PersonData personData in Program.people)
                             b.Add(Serializer.ConvertObjectToBytes(personData));
