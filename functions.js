@@ -1,6 +1,7 @@
-function renderTable(){
+function renderTable(personArray){
+    const tbody = document.getElementById('personTbody')
     tbody.innerHTML = "";
-    for(const pers of array){
+    for(const pers of personArray){
     const tr2 = document.createElement('tr')
     tbody.appendChild(tr2)
     tr2.addEventListener('click', function(e){

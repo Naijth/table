@@ -31,8 +31,7 @@ createHTMLElement('table', 'personTable', document.body)
 createHTMLElementWithParentId('thead', 'personThead', 'personTable')
 createHTMLElementWithParentId('tr', 'personTr1', 'personThead')
 createTableHeaderElements()
-const tbody = document.createElement('tbody')
-table.appendChild(tbody)
+createHTMLElementWithParentId('tbody', 'personTbody', 'personTable')
 const form = document.getElementById('form')
 form.addEventListener('submit',function(e){
     e.preventDefault()
@@ -57,8 +56,8 @@ form.addEventListener('submit',function(e){
             pet: petValue
         }
         array.push(newPerson)
-        renderTable()
+        renderTable(array)
         form.reset()
     }
 })
-renderTable()
+renderTable(array)
