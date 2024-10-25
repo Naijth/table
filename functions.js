@@ -48,9 +48,28 @@ function validateFields(firstname1, lastname, pet){
     }
     return result
 }
+function createHTMLElement(tag, id, parent){
+    const a = document.createElement(tag)
+    a.id = id
+    parent.appendChild(a)
+}
+function createHTMLElementWithParentId(tag, id, parentId){
+    const parentElement = document.getElementById(parentId)
+    if (parentElement != undefined){
+        createHTMLElement(tag, id, parentElement)
+    }
+}
 function createTableCell(tagName, innerHTML, parentElement){
-    const tag = document.createElement(tagName)
-    tag.innerHTML = innerHTML
-    parentElement.appendChild(tag)
-    return tag
+    const a = document.createElement(tagName)
+    a.innerHTML = innerHTML
+    parentElement.appendChild(a)
+    return a
+}
+function createTableHeaderElements(){
+    const parentElement = document.getElementById('personTr1')
+    createTableCell('th', 'Vezetéknév', parentElement)
+    const asd = createTableCell('th', 'Keresztnév', parentElement)
+    asd.colSpan = 2
+    createTableCell('th', 'Házassági státusz', parentElement)
+    createTableCell('th', 'Háziállat', parentElement)
 }

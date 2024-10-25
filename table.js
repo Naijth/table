@@ -27,17 +27,10 @@ let array = [
         pet: 'macska'
     },
 ]
-const table = document.createElement('table')
-document.body.appendChild(table)
-const thead = document.createElement('thead')
-table.appendChild(thead)
-const tr1 = document.createElement('tr')
-thead.appendChild(tr1)
-createTableCell('th', 'Vezetéknév', tr1)
-const asd = createTableCell('th', 'Keresztnév', tr1) 
-asd.colSpan = 2
-createTableCell('th', 'Házassági státusz', tr1)
-createTableCell('th', 'Háziállat', tr1)
+createHTMLElement('table', 'personTable', document.body)
+createHTMLElementWithParentId('thead', 'personThead', 'personTable')
+createHTMLElementWithParentId('tr', 'personTr1', 'personThead')
+createTableHeaderElements()
 const tbody = document.createElement('tbody')
 table.appendChild(tbody)
 const form = document.getElementById('form')
