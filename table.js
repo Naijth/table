@@ -33,11 +33,11 @@ const thead = document.createElement('thead')
 table.appendChild(thead)
 const tr1 = document.createElement('tr')
 thead.appendChild(tr1)
-createTableCell('td', 'Vezetéknév', tr1)
-const asd = createTableCell('td', 'Keresztnév', tr1) 
+createTableCell('th', 'Vezetéknév', tr1)
+const asd = createTableCell('th', 'Keresztnév', tr1) 
 asd.colSpan = 2
-createTableCell('td', 'Házassági státusz', tr1)
-createTableCell('td', 'Háziállat', tr1)
+createTableCell('th', 'Házassági státusz', tr1)
+createTableCell('th', 'Háziállat', tr1)
 const tbody = document.createElement('tbody')
 table.appendChild(tbody)
 const form = document.getElementById('form')
@@ -65,6 +65,7 @@ form.addEventListener('submit',function(e){
         }
         array.push(newPerson)
         renderTable()
+        form.reset()
     }
 })
 renderTable()
