@@ -45,7 +45,7 @@ form.addEventListener('submit',function(e){
     let firstname2Value = firstname2.value
     const marriedValue = married.checked
     const petValue = pet.value
-    if (validateFields(firstname1, lastname, pet) == true){
+    if (validateFields() == true){
         if (firstname2Value == '')
             firstname2Value = undefined;
         const newPerson = {
