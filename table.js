@@ -32,6 +32,7 @@ createHTMLElementWithParentId('thead', 'personThead', 'personTable')
 createHTMLElementWithParentId('tr', 'personTr1', 'personThead')
 createTableHeaderElements()
 createHTMLElementWithParentId('tbody', 'personTbody', 'personTable')
+
 const form = document.getElementById('form')
 form.addEventListener('submit',function(e){
     e.preventDefault()
@@ -40,20 +41,13 @@ form.addEventListener('submit',function(e){
     const firstname2 = document.getElementById('firstname2')
     const married = document.getElementById('married')
     const pet = document.getElementById('pet')
-    const lastnameValue = lastname.value
-    const firstname1Value = firstname1.value
-    let firstname2Value = firstname2.value
-    const marriedValue = married.checked
-    const petValue = pet.value
-    if (validateFields() == true){
-        if (firstname2Value == '')
-            firstname2Value = undefined;
+    if (validateFields(lastname, firstname1,) == true){
         const newPerson = {
-            firstname1: firstname1Value,
-            firstname2: firstname2Value,
-            lastname: lastnameValue,
-            married: marriedValue,
-            pet: petValue
+            firstname1: firstname1.value,
+            firstname2: firstname2.value,
+            lastname: lastname.value,
+            married: married.checked,
+            pet: pet.value
         }
         array.push(newPerson)
         renderTable(array)
