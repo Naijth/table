@@ -40,18 +40,7 @@ form.addEventListener('submit',function(e){
     const firstname2 = document.getElementById('firstname2')
     const married = document.getElementById('married')
     const pet = document.getElementById('pet')
-<<<<<<< Updated upstream
-    const lastnameValue = lastname.value
-    const firstname1Value = firstname1.value
-    let firstname2Value = firstname2.value
-    const marriedValue = married.checked
-    const petValue = pet.value
-    if (validateFields() == true){
-        if (firstname2Value == '')
-            firstname2Value = undefined;
-=======
     if (validateFields(lastname, firstname1, pet) == true){
->>>>>>> Stashed changes
         const newPerson = {
             firstname1: firstname1Value,
             firstname2: firstname2Value,
