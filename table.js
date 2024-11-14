@@ -42,11 +42,11 @@ form.addEventListener('submit',function(e){
     const pet = document.getElementById('pet')
     if (validateFields(lastname, firstname1, pet) == true){
         const newPerson = {
-            firstname1: firstname1Value,
-            firstname2: firstname2Value,
-            lastname: lastnameValue,
-            married: marriedValue,
-            pet: petValue
+            firstname1: firstname1.value,
+            firstname2: firstname2.value,
+            lastname: lastname.value,
+            married: married.checked,
+            pet: pet.value
         }
         array.push(newPerson)
         renderTable(array)
