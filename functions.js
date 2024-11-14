@@ -28,6 +28,7 @@ function renderTable(personArray){
     createTableCell('td', pers.pet, tr2)
     }
 }
+<<<<<<< Updated upstream
 /**Using the given id in the forms this checks whether firstname1, lastname and pet have values and if they do not, it refuses to add the new item to the list
 and writing out "kötelező" under them**/
 function validateFields(){
@@ -53,6 +54,29 @@ function validateFields(){
     return result
 }
 /**A universal createElement function which requires (what you want to create, a custom id, the parent that you're attaching it to)**/
+=======
+/**This checks whether firstname1, lastname and pet have values in the form via validateELements() and if they do not, it refuses to add the 
+new item to the list and writes "kötelező" under them*/
+function validateFields(lastname, firstname1, pet){
+    let result = true
+    result = validateElement(lastname)
+    result = validateElement(firstname1)
+    result = validateElement(pet)
+    return result
+}
+/**Only used in validateFields(). This thing just checks whether the thing you wrote in the has a value or not, returns false if it doesn't and returns true if it does*/
+function validateElement(unverifiedElement) {
+    const error = unverifiedElement.parentElement.querySelectorAll('.error')
+    if (unverifiedElement.value == ""){
+        error.innerHTML = "kötelező"
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+/**A universal createElement function which requires (what you want to create, a custom id, the parent that you're attaching it to)*/
+>>>>>>> Stashed changes
 function createHTMLElement(tag, id, parent){
     const a = document.createElement(tag)
     a.id = id
