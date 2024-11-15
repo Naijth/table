@@ -1,4 +1,5 @@
-/**What this does basically is it creates the entirety of the table using the createTableCell function and adds an eventlistener which applies the selected group to the things**/ 
+/**What this does basically is it creates the entirety of the table using the createTableCell function and adds an eventlistener 
+which applies the selected group to the things*/ 
 function renderTable(personArray){
     const tbody = document.getElementById('personTbody')
     tbody.innerHTML = "";
@@ -37,7 +38,8 @@ function validateFields(lastname, firstname1, pet){
     result = validateElement(pet)
     return result
 }
-/**Only used in validateFields(). This thing just checks whether the thing you wrote in the has a value or not, returns false if it doesn't and returns true if it does*/
+/**Only used in validateFields(). This thing just checks whether the thing you wrote in the has a value or not,
+returns false if it doesn't and returns true if it does*/
 function validateElement(unverifiedElement) {
     const error = unverifiedElement.parentElement.querySelectorAll('.error')
     if (unverifiedElement.value == ""){
@@ -48,27 +50,30 @@ function validateElement(unverifiedElement) {
         return true;
     }
 }
-/**A universal createElement function which requires (what you want to create, a custom id, the parent that you're attaching it to)*/
+/**A universal createElement function which requires (what you want to create, a custom id,
+the parent that you're attaching it to)*/
 function createHTMLElement(tag, id, parent){
     const a = document.createElement(tag)
     a.id = id
     parent.appendChild(a)
 }
-/**A universal createElement function that uses id, which requires (what you want to create, a custom id, the parent's id that you're attaching it to)**/
+/**A universal createElement function that uses id, which requires (what you want to create,
+a custom id, the parent's id that you're attaching it to)*/
 function createHTMLElementWithParentId(tag, id, parentId){
     const parentElement = document.getElementById(parentId)
     if (parentElement != undefined){
         createHTMLElement(tag, id, parentElement)
     }
 }
-/**A function solely used to add a cell to a table, but could be used to do more. It requires (what you want to make, the text inide it, the parent you're attaching it to)**/
+/**A function solely used to add a cell to a table, but could be used to do more.
+It requires (what you want to make, the text inide it, the parent you're attaching it to)*/
 function createTableCell(tagName, innerHTML, parentElement){
     const a = document.createElement(tagName)
     a.innerHTML = innerHTML
     parentElement.appendChild(a)
     return a
 }
-/**A function that's only purpose is to make the header for the table**/
+/**A function that's only purpose is to make the header for the table*/
 function createTableHeaderElements(){
     const parentElement = document.getElementById('personTr1')
     createTableCell('th', 'Vezetéknév', parentElement)
